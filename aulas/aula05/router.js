@@ -22,4 +22,20 @@ router.post("/produtos", function(req, res){
     }
 });
 
-module.exports = router;
+router.put("/produtos/:produtoId", function(req, res){
+  if(req.params.produtoId == 1){
+    res.json({});
+  } else {
+    res.status(404).json({msg: "Produto não encontrado"});
+  }
+});
+
+router.delete("/produtos/:produtoId", function(req, res){
+  if(req.params.produtoId == 1) {
+  res.status(204).end();
+  } else{
+    res.status(404).json({msg: "Produto não encontrado"});
+  }
+});
+
+module.exports = router; 
