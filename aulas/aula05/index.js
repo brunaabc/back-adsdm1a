@@ -12,4 +12,4 @@ app.listen(3000, function(){
     console.log("API está On!");
 });
 
-module.exports =app
+module.exports =app;
